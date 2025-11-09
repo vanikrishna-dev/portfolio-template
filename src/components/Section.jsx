@@ -1,14 +1,10 @@
-import { User } from 'lucide-react';
-
-const Section = () => {
-    return <div className="m-4">
-        <div className="flex mb-2">
-            <User />
-            <div className="font-bold text-xl">About Me</div>
+const Section = ({icon, children, sectionTitle}) => {
+    return <div className="mb-12 mx-5">
+        <div className="flex my-3 mb-6 items-center">
+             {icon}
+            <h1 className="font-bold text-2xl mx-2">{sectionTitle}</h1>
         </div>   
-        <div>
-        <p>I'm a passionate full stack developer with 5 years of experience in building web applications. I love creating efficient, scalable, and user-friendly solutions to complex problems.</p>
-        </div>
+        {children}
     </div>
 
 
