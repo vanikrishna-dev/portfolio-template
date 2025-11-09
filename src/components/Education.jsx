@@ -3,9 +3,14 @@ import Section from "./Section";
 import Graduation from './Graduation';
 
 const Education = () => {
+
+    const eduDetails = [
+        {title:"Bachelor of Science in Computer Science", school: "University of Technology", year:"2015-2019"},
+        {title:"Full Stack Web Development Bootcamp", school: "Code Academy", year:"2020"}
+    ];
+
     return <Section icon={<BookOpen />} sectionTitle="Education">
-        <Graduation title="Bachelor of Science in Computer Science" school= "University of Technology" year="2015-2019"></Graduation>
-        <Graduation title="Full Stack Web Development Bootcamp" school= "Code Academy" year="2020"></Graduation>
+        {eduDetails.map(item => <Graduation key={item.title} title={item.title} school= {item.school} year={item.year} />)}
     </Section>;
 }
 
